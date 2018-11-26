@@ -1,6 +1,7 @@
 """
     user模型，用于做数据库映射,继承base这个基类
 """
+import datetime
 import uuid as uuid
 from sqlalchemy import Column, String, SmallInteger
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -14,7 +15,13 @@ class UserModel(Base):
     email = Column(String(50), unique=True, nullable=False)
     nickname = Column(String(50), unique=True)
     auth = Column(SmallInteger, default=1)
+    date_time = datetime.datetime(2018,11,26,20,29,59)
     _password = Column('password', String(100))
+
+    # 用于序列化start
+    def keys(self):
+        return ['id', 'email', 'nickname', 'auth', 'date_time']
+    #   用于序列化end
 
     @property
     def password(self):

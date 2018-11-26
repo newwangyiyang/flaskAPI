@@ -24,6 +24,7 @@ def verify_token(token):
         return True
 
 
+
 def verigy_auth_token(token):
     s = Serializer(current_app.config['SECRET_KEY'])
     try:
