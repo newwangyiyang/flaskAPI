@@ -4,6 +4,8 @@ from flask_sqlalchemy import SQLAlchemy as _SQLAlchemy, BaseQuery
 from sqlalchemy import Column, Integer, SmallInteger
 from contextlib import contextmanager
 
+from app.libs.wyy_exception import UserNotFoundException
+
 
 class SQLAlchemy(_SQLAlchemy):
     @contextmanager
@@ -21,6 +23,18 @@ class Query(BaseQuery):
         if 'status' not in kwargs.keys():
             kwargs['status'] = 1
         return super(Query, self).filter_by(**kwargs)
+
+    def get_or_404(self, ident):
+        rv = self.get(ident)
+        if rv is None:
+            raise UserNotFoundException()
+        return rv
+
+    def first_or_404(self):
+        rv = self.first()
+        if rv is None:
+            raise UserNotFoundException()
+        return rv
 
 
 db = SQLAlchemy(query_class=Query)

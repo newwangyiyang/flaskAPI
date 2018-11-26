@@ -12,4 +12,3 @@ class ClientTypeEnum(Enum):
     USER_MINI = 200
     # 微信公众号
     USER_WX = 201
-    pass

@@ -10,6 +10,7 @@ class BaseApiException(HTTPException):
     msg = '未知错误'
     status_code = 1
     headers = ('Content-Type', 'application/json')
+
     def __init__(self, code=None, msg=None,status_code=None, headers=None):
         if code:
             self.code = code
@@ -23,10 +24,10 @@ class BaseApiException(HTTPException):
 
     def get_body(self, environ=None):
         body = dict(
-            code = self.code, # http请求的状态码
+            # code = self.code, # http请求的状态码
             msg = self.msg,
             status_code = self.status_code, #本次请求的状态码
-            data = request.method + ' ' +self.get_url_no_params()
+            data = request.method + ' ' + self.get_url_no_params()
         )
         return json.dumps(body)
 

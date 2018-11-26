@@ -3,8 +3,9 @@
 """
 import uuid as uuid
 from sqlalchemy import Column, String, SmallInteger
-from werkzeug.security import generate_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 
+from app.libs.wyy_exception import UserNotFoundException, AuthFailedException
 from app.models.base_model import Base, db
 
 
@@ -27,7 +28,7 @@ class UserModel(Base):
     def register_by_email(nickname, account, secret):
         """
             注册新增用户
-        :return:
+            :return:
         """
         id = str(uuid.uuid4()).replace('-', '')
         with db.auto_commit():
@@ -37,3 +38,15 @@ class UserModel(Base):
             user.nickname = nickname
             user.password = secret
             db.session.add(user)
+
+    @staticmethod
+    def verify_by_email(email, password):
+        user = UserModel.query.filter_by(email=email).first_or_404()
+        if not user.check_password(password):
+            raise AuthFailedException()
+        return {'uid': user.id}
+
+    def check_password(self, raw):
+        if not self._password:
+            return False
+        return check_password_hash(self._password, raw)

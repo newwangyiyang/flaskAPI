@@ -2,15 +2,19 @@
     参数验证模块
 """
 
-from wtforms import Form, StringField, IntegerField
+from wtforms import StringField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, Regexp, ValidationError
 
 from app.libs.enums import ClientTypeEnum
 from app.models.user_model import UserModel
+from .baseForm import BaseForm
 
 
-class ClientForm(Form):
-    account = StringField(validators=[DataRequired(), Length(min=5, max=32)])
+class ClientForm(BaseForm):
+    """
+        继承自BaseForm
+    """
+    account = StringField(validators=[DataRequired(message='账号为必传选项'), Length(min=5, max=32)])
     secret = StringField()
     type = IntegerField(validators=[DataRequired()])
 
@@ -27,10 +31,10 @@ class ClientForm(Form):
 
 
 class UserEmailForm(ClientForm):
-    account = StringField(validators=[Email(message='请输入正确的邮箱地址')])
+    account = StringField(validators=[Email(message='邮箱地址错误')])
     secret = StringField(validators=[DataRequired(), Regexp(r'^[0-9a-zA-Z_*&$#@]{6,22}$')])
     nickname = StringField(validators=[DataRequired(), Length(min=2, max=22)])
 
     def validate_account(self, field):
         if UserModel.query.filter_by(email=field.data).first():
-            raise ValidationError()
+            raise ValidationError(message='用户名已注册')
