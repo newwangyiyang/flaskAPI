@@ -3,14 +3,14 @@
 """
 import datetime
 import uuid as uuid
-from sqlalchemy import Column, String, SmallInteger
+from sqlalchemy import Column, String, SmallInteger, orm
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from app.libs.wyy_exception import UserNotFoundException, AuthFailedException
-from app.models.base_model import Base, db
+from app.models.base_model import BaseModel, db
 
 
-class UserModel(Base):
+class UserModel(BaseModel):
     id = Column(String(32), primary_key=True)
     email = Column(String(50), unique=True, nullable=False)
     nickname = Column(String(50), unique=True)
@@ -19,8 +19,9 @@ class UserModel(Base):
     _password = Column('password', String(100))
 
     # 用于序列化start
-    def keys(self):
-        return ['id', 'email', 'nickname', 'auth', 'date_time']
+    @orm.reconstructor
+    def __init__(self):
+        self.feilds = ['id', 'email', 'nickname', 'auth', 'date_time']
     #   用于序列化end
 
     @property
@@ -51,7 +52,8 @@ class UserModel(Base):
         user = UserModel.query.filter_by(email=email).first_or_404()
         if not user.check_password(password):
             raise AuthFailedException()
-        return {'uid': user.id}
+        scope = 'AdminScope' if user.auth == 2 else 'UserScope'
+        return {'uid': user.id, 'scope': scope}
 
     def check_password(self, raw):
         if not self._password:

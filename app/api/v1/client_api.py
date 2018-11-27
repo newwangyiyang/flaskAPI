@@ -19,7 +19,7 @@ def __create_client_by_email():
 
 @api.route('/create_client', methods=['POST'])
 def create_client():
-    form = ClientForm().validate_for_api() # 在这里对参数校验，如果校验不同过，会抛出异常，给前端已明确的提示
+    form = ClientForm().validate_for_api() # 在这里对参数校验，如果校验不同过，会自动抛出异常，给前端已明确的提示
     promise = {
         ClientTypeEnum.USER_EMAIL: __create_client_by_email
     }

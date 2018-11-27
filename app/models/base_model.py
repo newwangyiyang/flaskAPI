@@ -1,3 +1,4 @@
+import time
 from datetime import datetime
 
 from flask_sqlalchemy import SQLAlchemy as _SQLAlchemy, BaseQuery
@@ -40,23 +41,49 @@ class Query(BaseQuery):
 db = SQLAlchemy(query_class=Query)
 
 
-class Base(db.Model):
+class BaseModel(db.Model):
     __abstract__ = True
-    create_time = Column(Integer)
+    create_time = Column(Integer, default=int(time.time()))
     status = Column(SmallInteger, default=1)
 
-    def __init__(self):
-        self.create_time = int(datetime.now().timestamp())
-
     def __getitem__(self, item):
+        """
+            用于序列化
+        :param item:
+        :return:
+        """
         return getattr(self, item)
 
-    @property
-    def create_datetime(self):
-        if self.create_time:
-            return datetime.fromtimestamp(self.create_time)
-        else:
-            return None
+    def keys(self):
+        """
+            用于序列化
+        :return:
+        """
+        return self.feilds
+
+    def hide(self, *args):
+        """
+            返回前端需要隐藏哪些字段
+            例如:
+                隐藏id, email字段
+            users = [v.hide('id', 'email') for v in users]
+            jsonify(books)
+            :param hide_value:
+            :return:
+        """
+        for arg in args:
+            self.feilds.remove(arg)
+        return self
+
+    def append(self, *args):
+        """
+            增加返给前端的字段
+            :param args:
+            :return:
+        """
+        for arg in args:
+            self.fields.append(arg)
+        return self
 
     def set_attrs(self, attrs_dict):
         for key, value in attrs_dict.items():

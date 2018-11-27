@@ -9,7 +9,7 @@ from app.libs.wyy_exception import ParameterException
 
 class BaseForm(Form):
     def __init__(self):
-        super(BaseForm, self).__init__(data=request.json)
+        super(BaseForm, self).__init__(data=request.get_json(silent=True), **request.args.to_dict())
 
     def validate_for_api(self):
         valid = super(BaseForm, self).validate()

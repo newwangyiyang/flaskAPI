@@ -2,12 +2,12 @@
     参数验证模块
 """
 
-from wtforms import StringField, IntegerField
+from wtforms import StringField, IntegerField, FloatField
 from wtforms.validators import DataRequired, Length, Email, Regexp, ValidationError
 
 from app.libs.enums import ClientTypeEnum
 from app.models.user_model import UserModel
-from .baseForm import BaseForm
+from .base_form import BaseForm
 
 
 class ClientForm(BaseForm):
@@ -38,3 +38,13 @@ class UserEmailForm(ClientForm):
     def validate_account(self, field):
         if UserModel.query.filter_by(email=field.data).first():
             raise ValidationError(message='用户名已注册')
+
+
+class BookForm(BaseForm):
+    title = StringField(validators=[Length(min=1, max=50)])
+    price = FloatField(validators=[DataRequired()])
+    author = StringField(validators=[DataRequired(), Length(min=1, max=30)])
+
+
+class TokenForm(BaseForm):
+    token = StringField(validators=[DataRequired()])

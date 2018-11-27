@@ -15,9 +15,13 @@ class ParameterException(BaseApiException):
 
 
 class SuccessException(BaseApiException):
+    """
+        请求成功的数据接口
+    """
     code = 200
     msg = '操作成功'
     status_code = 0
+    data = None
 
 
 class ServerException(BaseApiException):
@@ -35,4 +39,9 @@ class UserNotFoundException(BaseApiException):
 class AuthFailedException(BaseApiException):
     code = 401
     msg = '密码错误'
+    status_code = 1
+
+class ForbiddenException(BaseApiException):
+    code = 403
+    msg = '禁止访问'
     status_code = 1
