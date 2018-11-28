@@ -4,7 +4,9 @@
 import logging
 
 from flask import request
+from flask_uploads import configure_uploads, UploadSet
 
+from app.libs.upload_file import set_file
 from app.utils.log import init_logger
 from app.utils.param_util import get_request_params, get_url_no_params
 from .app import Flask
@@ -16,7 +18,7 @@ from flask_limiter.util import get_remote_address
 
 def init_limiter(app):
     """限制访问视图函数的次数， 每天200次"""
-    limiter = Limiter(key_func=get_remote_address, default_limits=['200/day, 1/minute, 1/second'])
+    limiter = Limiter(key_func=get_remote_address, default_limits=['200/day, 10/minute, 1/second'])
     limiter.logger.addHandler(logging.StreamHandler())
     limiter.init_app(app)
 
@@ -24,6 +26,11 @@ def init_limiter(app):
 def register_blueprint_v1(app):
     from app.api.v1 import create_blueprint_v1
     app.register_blueprint(create_blueprint_v1(), url_prefix='/v1')
+
+
+def init_upload(app):
+    """将创建的文件上传对象注册到核心对象app上"""
+    configure_uploads(app, set_file)
 
 
 def register_plugin(app):
@@ -39,6 +46,9 @@ def register_plugin(app):
 
     init_logger(app)
     """日志初始化"""
+
+    init_upload(app)
+    """上传文件初始化"""
 
 
 def create_app():

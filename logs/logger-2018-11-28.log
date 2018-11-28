@@ -57,3 +57,221 @@ Traceback (most recent call last):
   File "D:\FlaskStudy\flaskAPI\app\validates\base_form.py", line 17, in validate_for_api
     raise ParameterException(msg=self.errors)
 app.libs.wyy_exception.ParameterException: 400 Bad Request: {'type': ['105 is not a valid ClientTypeEnum']}
+2018-11-28 20:30:15,731 - INFO - __init__.py - before_request - 65 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:30:15,732 - ERROR - ginger.py - framework_error - 21 - 400 Bad Request: {'file': ['图片为必传字段']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 21, in img_upload
+    form.validate_for_api()
+  File "D:\flaskDemo\ginger\app\validates\base_form.py", line 17, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'file': ['图片为必传字段']}
+2018-11-28 20:32:29,427 - INFO - __init__.py - before_request - 65 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:32:29,427 - ERROR - ginger.py - framework_error - 21 - 400 Bad Request: {'file': ['图片为必传字段']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 24, in img_upload
+    form.validate_for_api()
+  File "D:\flaskDemo\ginger\app\validates\base_form.py", line 17, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'file': ['图片为必传字段']}
+2018-11-28 20:33:40,627 - INFO - __init__.py - before_request - 65 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:33:40,627 - ERROR - ginger.py - framework_error - 21 - 400 Bad Request: {'file': ['图片为必传字段']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 24, in img_upload
+    form.validate_for_api()
+  File "D:\flaskDemo\ginger\app\validates\base_form.py", line 17, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'file': ['图片为必传字段']}
+2018-11-28 20:35:04,378 - INFO - __init__.py - before_request - 65 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:35:04,379 - ERROR - ginger.py - framework_error - 21 - 400 Bad Request: {'file': ['图片为必传字段']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 24, in img_upload
+    form.validate_for_api()
+  File "D:\flaskDemo\ginger\app\validates\base_form.py", line 17, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'file': ['图片为必传字段']}
+2018-11-28 20:36:21,922 - INFO - __init__.py - before_request - 65 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:36:21,923 - ERROR - ginger.py - framework_error - 21 - 400 Bad Request: {'file': ['只能上传图片']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 24, in img_upload
+    form.validate_for_api()
+  File "D:\flaskDemo\ginger\app\validates\base_form.py", line 17, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'file': ['只能上传图片']}
+2018-11-28 20:37:55,786 - INFO - __init__.py - before_request - 65 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:37:55,786 - ERROR - ginger.py - framework_error - 21 - 400 Bad Request: {'file': ['只能上传图片']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 24, in img_upload
+    form.validate_for_api()
+  File "D:\flaskDemo\ginger\app\validates\base_form.py", line 18, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'file': ['只能上传图片']}
+2018-11-28 20:38:49,050 - INFO - __init__.py - before_request - 65 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:38:49,051 - ERROR - ginger.py - framework_error - 21 - 400 Bad Request: {'file': ['图片为必传字段']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 24, in img_upload
+    form.validate_for_api()
+  File "D:\flaskDemo\ginger\app\validates\base_form.py", line 17, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'file': ['图片为必传字段']}
+2018-11-28 20:39:56,658 - INFO - __init__.py - before_request - 65 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:39:56,659 - ERROR - ginger.py - framework_error - 21 - 400 Bad Request: {'file': ['只能上传图片']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 24, in img_upload
+    form.validate_for_api()
+  File "D:\flaskDemo\ginger\app\validates\base_form.py", line 17, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'file': ['只能上传图片']}
+2018-11-28 20:40:57,705 - INFO - __init__.py - before_request - 65 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:40:57,706 - ERROR - ginger.py - framework_error - 21 - 400 Bad Request: {'file': ['只能上传图片']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 24, in img_upload
+    form.validate_for_api()
+  File "D:\flaskDemo\ginger\app\validates\base_form.py", line 17, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'file': ['只能上传图片']}
+2018-11-28 20:46:17,737 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:46:17,738 - ERROR - ginger.py - framework_error - 21 - name 'set_file' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 25, in img_upload
+    set_file.save(image, name=filename)
+NameError: name 'set_file' is not defined
+2018-11-28 20:47:12,369 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:54:37,115 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:58:02,681 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:58:02,682 - ERROR - ginger.py - framework_error - 21 - 'module' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 25, in img_upload
+    filename = gen_uuid() + suffix
+TypeError: 'module' object is not callable
+2018-11-28 20:58:48,984 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 20:59:14,749 - INFO - __init__.py - before_request - 66 - [GET] /_uploads/file/ef542a7b936b4972ba033ebd8c1339cb.jpg 无参
+2018-11-28 20:59:14,972 - INFO - __init__.py - before_request - 66 - [GET] /favicon.ico 无参
+2018-11-28 20:59:14,972 - ERROR - ginger.py - framework_error - 21 - 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\werkzeug\routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+2018-11-28 20:59:29,149 - INFO - __init__.py - before_request - 66 - [GET] /uploads/file/ef542a7b936b4972ba033ebd8c1339cb.jpg 无参
+2018-11-28 20:59:29,149 - ERROR - ginger.py - framework_error - 21 - 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\werkzeug\routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+2018-11-28 21:00:18,411 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 21:00:57,448 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 21:00:57,449 - ERROR - ginger.py - framework_error - 21 - 429 Too Many Requests: 1 per 1 minute
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 1 per 1 minute
+2018-11-28 21:01:44,560 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 21:03:49,606 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 21:04:15,245 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 21:05:08,248 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 21:07:44,870 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 21:07:44,871 - ERROR - ginger.py - framework_error - 21 - 'FileField' object has no attribute 'getlist'
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 22, in img_upload
+    images = form.file.getlist("file")
+AttributeError: 'FileField' object has no attribute 'getlist'
+2018-11-28 21:08:39,446 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 21:08:39,447 - ERROR - ginger.py - framework_error - 21 - 'SpooledTemporaryFile' object has no attribute 'data'
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 29, in img_upload
+    set_file.save(image.data, name=filename)
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\werkzeug\datastructures.py", line 2745, in __getattr__
+    return getattr(self.stream, name)
+AttributeError: 'SpooledTemporaryFile' object has no attribute 'data'
+2018-11-28 21:09:03,850 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 21:10:33,802 - INFO - __init__.py - before_request - 66 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 21:10:33,812 - ERROR - ginger.py - framework_error - 21 - 
+Traceback (most recent call last):
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\flaskDemo\ginger\app\api\v1\imgupload_api.py", line 27, in img_upload
+    set_file.save(image, name=filename)
+  File "C:\Users\Administrator.USER01801141917\.virtualenvs\ginger-eDHwV1OA\lib\site-packages\flask_uploads.py", line 415, in save
+    raise UploadNotAllowed()
+flask_uploads.UploadNotAllowed
+2018-11-28 21:22:49,261 - INFO - __init__.py - before_request - 65 - [POST] /v1/imgupload/img_upload 无参
+2018-11-28 21:23:36,636 - INFO - __init__.py - before_request - 65 - [POST] /v1/imgupload/img_upload 无参

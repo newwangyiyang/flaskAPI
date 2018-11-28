@@ -4,7 +4,7 @@
 
 from flask import Blueprint
 
-from app.api.v1 import book_api, user_api, client_api, token_api, gift_api
+from app.api.v1 import book_api, user_api, client_api, token_api, gift_api, imgupload_api
 
 
 def create_blueprint_v1():
@@ -15,4 +15,5 @@ def create_blueprint_v1():
     client_api.api.register(v1)
     token_api.api.register(v1)
     gift_api.api.register(v1)
+    imgupload_api.api.register(v1)
     return v1

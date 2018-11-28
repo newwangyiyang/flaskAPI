@@ -1,10 +1,11 @@
 """
     参数验证模块
 """
-
-from wtforms import StringField, IntegerField, FloatField
+from flask_wtf.file import FileRequired, FileAllowed
+from wtforms import StringField, IntegerField, FloatField, FileField
 from wtforms.validators import DataRequired, Length, Email, Regexp, ValidationError
 
+from app.libs.upload_file import set_file
 from app.libs.enums import ClientTypeEnum
 from app.models.user_model import UserModel
 from .base_form import BaseForm
@@ -48,3 +49,7 @@ class BookForm(BaseForm):
 
 class TokenForm(BaseForm):
     token = StringField(validators=[DataRequired()])
+
+
+class MyFileForm(BaseForm):
+    file = FileField(validators=[FileRequired(message='图片为必传字段'), FileAllowed(set_file, message='只能上传图片')])
