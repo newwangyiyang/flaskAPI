@@ -1,0 +1,59 @@
+2018-11-28 17:15:11,901 - INFO - __init__.py - before_request - 55 - [POST] /v1/book/all_book 无参
+2018-11-28 17:15:29,785 - INFO - __init__.py - before_request - 55 - [POST] /v1/book/all_boo 无参
+2018-11-28 17:15:29,786 - ERROR - ginger.py - framework_error - 28 - 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\werkzeug\routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+2018-11-28 17:17:37,848 - INFO - __init__.py - before_request - 55 - [POST] /v1/book/all_book 无参
+2018-11-28 17:18:00,427 - INFO - __init__.py - before_request - 55 - [POST] /v1/user/super_get_user/9222bbc0bfdd41fda38f1a8dd3a24d4 无参
+2018-11-28 17:20:29,353 - INFO - __init__.py - before_request - 55 - [POST] /v1/user/super_get_user/9222bbc0bfdd41fda38f1a8dd3a24d4 无参
+2018-11-28 17:21:29,692 - INFO - __init__.py - before_request - 55 - [POST] /v1/user/super_get_user/9222bbc0bfdd41fda38f1a8dd3a24d4 无参
+2018-11-28 17:23:34,226 - INFO - __init__.py - before_request - 55 - [POST] /v1/user/super_get_user/9222bbc0bfdd41fda38f1a8dd3a24d4 无参
+2018-11-28 17:23:34,244 - ERROR - ginger.py - framework_error - 21 - 404 Not Found: 用户未找到
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_httpauth.py", line 104, in decorated
+    return f(*args, **kwargs)
+  File "D:\FlaskStudy\flaskAPI\app\api\v1\user_api.py", line 18, in super_get_user
+    user = UserModel.query.filter_by(id=uid).first_or_404()
+  File "D:\FlaskStudy\flaskAPI\app\models\base_model.py", line 37, in first_or_404
+    raise UserNotFoundException()
+app.libs.wyy_exception.UserNotFoundException: 404 Not Found: 用户未找到
+2018-11-28 17:23:55,016 - INFO - __init__.py - before_request - 55 - [POST] /v1/user/super_get_user/9222bbc0bfdd41fda38f1a8dd3a24d4 无参
+2018-11-28 17:23:55,034 - ERROR - ginger.py - framework_error - 21 - 404 Not Found: 用户未找到
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_httpauth.py", line 104, in decorated
+    return f(*args, **kwargs)
+  File "D:\FlaskStudy\flaskAPI\app\api\v1\user_api.py", line 18, in super_get_user
+    user = UserModel.query.filter_by(id=uid).first_or_404()
+  File "D:\FlaskStudy\flaskAPI\app\models\base_model.py", line 37, in first_or_404
+    raise UserNotFoundException()
+app.libs.wyy_exception.UserNotFoundException: 404 Not Found: 用户未找到
+2018-11-28 17:24:52,724 - INFO - __init__.py - before_request - 55 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 105}
+2018-11-28 17:24:52,728 - ERROR - ginger.py - framework_error - 21 - 400 Bad Request: {'type': ['105 is not a valid ClientTypeEnum']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\FlaskStudy\flaskAPI\app\api\v1\token_api.py", line 18, in get_token
+    form = ClientForm().validate_for_api()
+  File "D:\FlaskStudy\flaskAPI\app\validates\base_form.py", line 17, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'type': ['105 is not a valid ClientTypeEnum']}

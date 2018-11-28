@@ -1,6 +1,7 @@
 """
     flask项目的入口app
 """
+from flask import current_app
 from werkzeug.exceptions import HTTPException
 
 from app import create_app
@@ -17,6 +18,7 @@ def framework_error(e):
         :param e:
         :return:
     """
+    current_app.logger.exception(e)
     if isinstance(e, BaseApiException):
         return e
     if isinstance(e, HTTPException):

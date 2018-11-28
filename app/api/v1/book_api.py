@@ -1,7 +1,7 @@
 """
     book视图函数
 """
-from flask import request, jsonify
+from flask import request, jsonify, current_app
 
 from app.libs.redprint import Redprint
 

@@ -5,3 +5,7 @@
 DEBUG = True
 
 TOKEN_EXPIRATION = 30 * 24 * 3600
+
+LOG_PATH = 'logs/'
+LOG_FILENAME = 'logoWyy.log'
+LOG_LEVEL = 'info'
