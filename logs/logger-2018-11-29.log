@@ -205,3 +205,156 @@ Traceback (most recent call last):
   File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
     raise RateLimitExceeded(exc_description)
 werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 10 per 1 minute
+2018-11-29 15:03:25,457 - INFO - run.py - <module> - 12 - 服务正在启动中...
+2018-11-29 15:07:34,307 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token 无参
+2018-11-29 15:07:34,309 - ERROR - ginger.py - framework_error - 19 - 400 Bad Request: {'account': ['账号为必传选项'], 'type': ['This field is required.']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\FlaskStudy\flaskAPI\app\api\v1\token_api.py", line 18, in get_token
+    form = ClientForm().validate_for_api()
+  File "D:\FlaskStudy\flaskAPI\app\validates\base_form.py", line 17, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'account': ['账号为必传选项'], 'type': ['This field is required.']}
+2018-11-29 15:07:44,065 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 15:07:44,072 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:07:44,074 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 1 per 1 second
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 1 per 1 second
+2018-11-29 15:07:56,767 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 15:07:56,774 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:07:56,776 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 1 per 1 second
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 1 per 1 second
+2018-11-29 15:07:58,109 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:08:03,523 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 15:08:03,552 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:08:03,555 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 1 per 1 second
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 1 per 1 second
+2018-11-29 15:08:34,972 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 15:08:35,001 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:08:35,003 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 1 per 1 second
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 1 per 1 second
+2018-11-29 15:09:57,004 - INFO - run.py - <module> - 12 - 服务正在启动中...
+2018-11-29 15:10:02,127 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 15:10:02,156 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:11:10,438 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 15:11:10,465 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:12:17,526 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 15:12:17,558 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:25:22,686 - INFO - __init__.py - before_request - 69 - [GET] /deliveryFive/ 无参
+2018-11-29 15:25:22,688 - ERROR - ginger.py - framework_error - 19 - 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\werkzeug\routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+2018-11-29 15:25:22,970 - INFO - __init__.py - before_request - 69 - [GET] /deliveryFive/favicon.ico 无参
+2018-11-29 15:25:22,971 - ERROR - ginger.py - framework_error - 19 - 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\werkzeug\routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+2018-11-29 15:27:18,818 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 15:27:18,837 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:27:22,331 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:33:05,395 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 15:33:05,408 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:34:34,132 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 15:34:34,147 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 15:44:25,017 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 15:44:25,047 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:43:22,125 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 16:43:22,139 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:43:26,291 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:44:35,450 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 16:44:35,463 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:44:37,826 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:45:43,480 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 16:45:43,492 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:46:39,829 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 16:46:39,841 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:46:40,854 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:46:41,673 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:47:30,368 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 16:47:30,380 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:47:31,561 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:47:32,382 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:47:33,340 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 16:47:39,635 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 16:47:39,653 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 17:00:54,252 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 17:00:54,284 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 17:04:49,986 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 17:04:49,998 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 17:05:59,008 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 17:05:59,023 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 17:06:10,828 - INFO - __init__.py - before_request - 69 - [OPTIONS] /v1/token/get_token 无参
+2018-11-29 17:06:10,842 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}

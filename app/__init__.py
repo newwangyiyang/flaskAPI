@@ -19,7 +19,7 @@ from flask_limiter.util import get_remote_address
 
 def init_limiter(app):
     """限制访问视图函数的次数， 每天200次"""
-    limiter = Limiter(key_func=get_remote_address, default_limits=['200/day, 10/minute, 1/second'])
+    limiter = Limiter(key_func=get_remote_address, default_limits=['300/day, 20/minute, 10/second'])
     limiter.logger.addHandler(logging.StreamHandler())
     limiter.init_app(app)
 
