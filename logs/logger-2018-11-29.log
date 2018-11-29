@@ -1,0 +1,207 @@
+
+
+2018-11-29 09:53:47,684 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 09:54:54,994 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 09:54:54,995 - INFO - ginger.py - framework_error - 21 - get() takes 2 positional arguments but 3 were given
+2018-11-29 09:56:12,504 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 09:56:53,708 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 09:59:01,878 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 09:59:27,183 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 09:59:27,185 - INFO - ginger.py - framework_error - 21 - division by zero
+2018-11-29 10:00:59,674 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:00:59,677 - ERROR - ginger.py - framework_error - 19 - division by zero
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\FlaskStudy\flaskAPI\app\api\v1\book_api.py", line 36, in get_redis_wyy
+    1 / 0
+ZeroDivisionError: division by zero
+2018-11-29 10:03:26,516 - INFO - __init__.py - before_request - 69 - [POST] /v1/book/all_book 无参
+2018-11-29 10:03:29,476 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:32,103 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:33,985 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:35,362 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:36,552 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:37,467 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:37,470 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 1 per 1 second
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 1 per 1 second
+2018-11-29 10:03:38,399 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:39,948 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:41,297 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:42,572 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:43,715 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:43,716 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 10 per 1 minute
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 10 per 1 minute
+2018-11-29 10:03:46,100 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:46,102 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 10 per 1 minute
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 10 per 1 minute
+2018-11-29 10:03:47,465 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:03:47,466 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 10 per 1 minute
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 10 per 1 minute
+2018-11-29 10:04:33,914 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:04:36,152 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:04:39,940 - INFO - __init__.py - before_request - 69 - [POST] /v1/book/all_book 无参
+2018-11-29 10:04:41,812 - INFO - __init__.py - before_request - 69 - [POST] /v1/book/all_book 无参
+2018-11-29 10:04:44,666 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:04:46,821 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:05:45,197 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 10:05:48,143 - INFO - __init__.py - before_request - 69 - [POST] /v1/book/all_book 无参
+2018-11-29 10:05:50,748 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 12:52:42,693 - INFO - run.py - <module> - 12 - 服务正在启动中...
+2018-11-29 12:53:50,978 - INFO - run.py - <module> - 12 - 服务正在启动中...
+2018-11-29 12:56:20,682 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 12:57:04,735 - INFO - __init__.py - before_request - 69 - [POST] /v1/user/super_get_user/9222bbc0bfdd41fda38f1a8dd3a24d4 无参
+2018-11-29 12:57:04,740 - ERROR - ginger.py - framework_error - 19 - 404 Not Found: 用户未找到
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_httpauth.py", line 104, in decorated
+    return f(*args, **kwargs)
+  File "D:\FlaskStudy\flaskAPI\app\api\v1\user_api.py", line 18, in super_get_user
+    user = UserModel.query.filter_by(id=uid).first_or_404()
+  File "D:\FlaskStudy\flaskAPI\app\models\base_model.py", line 37, in first_or_404
+    raise UserNotFoundException()
+app.libs.wyy_exception.UserNotFoundException: 404 Not Found: 用户未找到
+2018-11-29 12:57:58,651 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 105}
+2018-11-29 12:57:58,652 - ERROR - ginger.py - framework_error - 19 - 400 Bad Request: {'type': ['105 is not a valid ClientTypeEnum']}
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\FlaskStudy\flaskAPI\app\api\v1\token_api.py", line 18, in get_token
+    form = ClientForm().validate_for_api()
+  File "D:\FlaskStudy\flaskAPI\app\validates\base_form.py", line 17, in validate_for_api
+    raise ParameterException(msg=self.errors)
+app.libs.wyy_exception.ParameterException: 400 Bad Request: {'type': ['105 is not a valid ClientTypeEnum']}
+2018-11-29 12:58:08,165 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 14:32:07,162 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 14:44:29,586 - INFO - run.py - <module> - 12 - 服务正在启动中...
+2018-11-29 14:44:39,163 - INFO - __init__.py - before_request - 69 - [POST] /v1/token/get_token {'account': '1023097281@qq.com', 'secret': '123456', 'type': 100}
+2018-11-29 14:44:43,061 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 14:44:50,508 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 14:44:52,562 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 14:44:53,338 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 14:44:53,340 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 1 per 1 second
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 1 per 1 second
+2018-11-29 14:44:54,228 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 14:44:55,246 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 14:44:56,089 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 14:44:56,092 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 1 per 1 second
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 1 per 1 second
+2018-11-29 14:44:58,023 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 14:44:59,062 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 14:44:59,860 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 14:44:59,862 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 1 per 1 second
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 1 per 1 second
+2018-11-29 14:45:01,082 - INFO - __init__.py - before_request - 69 - [GET] /v1/book/get_redis_wyy 无参
+2018-11-29 14:45:01,085 - ERROR - ginger.py - framework_error - 19 - 429 Too Many Requests: 10 per 1 minute
+Traceback (most recent call last):
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 1811, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask\app.py", line 2087, in preprocess_request
+    rv = func()
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 465, in __check_request_limit
+    six.reraise(*sys.exc_info())
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\six.py", line 693, in reraise
+    raise value
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 462, in __check_request_limit
+    self.__evaluate_limits(endpoint, all_limits)
+  File "C:\Users\Administrator\.virtualenvs\flaskAPI-Fur5vEuz\lib\site-packages\flask_limiter\extension.py", line 359, in __evaluate_limits
+    raise RateLimitExceeded(exc_description)
+werkzeug.exceptions.TooManyRequests: 429 Too Many Requests: 10 per 1 minute

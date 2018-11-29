@@ -17,6 +17,7 @@ uuid = "*"
 flask-limiter = "*"
 utils = "*"
 flask-uploads = "*"
+tornado = "*"
 
 [requires]
 python_version = "3.7"

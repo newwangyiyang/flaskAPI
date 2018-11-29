@@ -27,7 +27,7 @@ class SuccessException(BaseApiException):
 class ServerException(BaseApiException):
     code = 500
     msg = '服务器错误'
-    status_code = 0
+    status_code = 1
 
 
 class UserNotFoundException(BaseApiException):

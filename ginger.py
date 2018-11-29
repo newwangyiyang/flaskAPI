@@ -15,8 +15,6 @@ app = create_app()
 def framework_error(e):
     """
         此处捕获全局的异常信息
-        :param e:
-        :return:
     """
     current_app.logger.exception(e)
     if isinstance(e, BaseApiException):

@@ -6,6 +6,7 @@ import logging
 from flask import request
 from flask_uploads import configure_uploads, UploadSet
 
+from app.libs.init_redis import init_redis
 from app.libs.upload_file import set_file
 from app.utils.log import init_logger
 from app.utils.param_util import get_request_params, get_url_no_params
@@ -58,6 +59,9 @@ def create_app():
 
     CORS(app)
     """解决跨域问题"""
+
+    init_redis(app)
+    """配置redis缓存"""
 
     @app.before_request
     def before_request():

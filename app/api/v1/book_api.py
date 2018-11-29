@@ -1,8 +1,9 @@
 """
     book视图函数
 """
-from flask import request, jsonify, current_app
+from flask import request, jsonify, current_app, json
 
+from app.libs.init_redis import redis_store
 from app.libs.redprint import Redprint
 
 # 实例化自定义红图
@@ -25,5 +26,12 @@ def add_book():
 
 @api.route('/all_book', methods=['POST'])
 def all_book():
+    redis_store.set('wyy', json.dumps({'name':'王一扬', 'age': 200}))
     books = BookModel.query.filter_by().all()
-    return jsonify(books)
+    return redis_store.get('wyy')
+
+
+@api.route('/get_redis_wyy', methods=['GET'])
+def get_redis_wyy():
+    # redis_store.delete('wyy')
+    return redis_store.get('wyy') or '时间'
