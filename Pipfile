@@ -18,6 +18,7 @@ flask-limiter = "*"
 utils = "*"
 flask-uploads = "*"
 tornado = "*"
+flask-redis = "*"
 
 [requires]
 python_version = "3.4"
